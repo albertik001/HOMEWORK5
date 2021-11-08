@@ -19,8 +19,8 @@ public class Main {
         Hero pudg = new Hero("Pudg -- ", 350, 30, "Kruk!");
         Hero axe = new Hero("Axe -- ", 300, 35, "XTWO Damage!");
         Hero[] teamspirit = {alhimic, antimag, pudg, axe};
-        for (int i = 0; i < teamspirit.length; i++) {
-            System.out.println(teamspirit[i].getNames() + " HP:" + teamspirit[i].getHealth() + " | URON:" + teamspirit[i].getDamage() + " | MegaPower:" + teamspirit[i].getMegapower());
+        for (Hero hero : teamspirit) {
+            System.out.println(hero.getNames() + " HP:" + hero.getHealth() + " | URON:" + hero.getDamage() + " | MegaPower:" + hero.getMegapower());
 
         }
         return teamspirit;
