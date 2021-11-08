@@ -7,8 +7,12 @@ public class Main {
         boss.setHealth(1001);
         boss.setDamage(70);
         boss.setMegapower("Огниво !!!");
-        System.out.println("Megaladon |" + boss.getHealth() + " \nUron |" + boss.getDamage() + "\nMegapower |" + boss.getMegapower());
-        createheroes();
+        System.out.println("-----BOSS--\n" + "Megaladon |" + boss.getHealth() + " \nUron |" + boss.getDamage() + "\nMegapower |" + boss.getMegapower());
+        Hero [] teamspirit = createheroes();
+        for (Hero hero : teamspirit) {
+            System.out.println(hero.getNames() + " HP:" + hero.getHealth() + " | URON:" + hero.getDamage() + " | MegaPower:" + hero.getMegapower());
+
+        }
     }
 
     public static Hero[] createheroes() {
@@ -19,10 +23,6 @@ public class Main {
         Hero pudg = new Hero("Pudg -- ", 350, 30, "Kruk!");
         Hero axe = new Hero("Axe -- ", 300, 35, "XTWO Damage!");
         Hero[] teamspirit = {alhimic, antimag, pudg, axe};
-        for (Hero hero : teamspirit) {
-            System.out.println(hero.getNames() + " HP:" + hero.getHealth() + " | URON:" + hero.getDamage() + " | MegaPower:" + hero.getMegapower());
-
-        }
         return teamspirit;
     }
 }
